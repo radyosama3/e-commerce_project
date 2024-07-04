@@ -81,8 +81,7 @@ class ProductController extends Controller
             $product = Product::findOrFail($id);
             Storage::delete($product->image);
             $product->delete();
-            $products=Product::all();
-            // return view('admin.all',compact("products"))->with("success","product deleted success");
+            $allcategory=Product::all();
             return redirect(url('products'))->with('success','product deleted success');
         }
 }

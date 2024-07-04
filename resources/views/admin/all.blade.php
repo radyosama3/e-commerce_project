@@ -38,8 +38,4 @@
     </tbody>
   </table>
 
-
-
-
-
 @endsection

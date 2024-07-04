@@ -66,6 +66,22 @@
         </a>
       </li>
       <li class="nav-item menu-items">
+        <a class="nav-link" href="{{route('addcategory')}}">
+          <span class="menu-icon">
+            <i class="mdi mdi-speedometer"></i>
+          </span>
+          <span class="menu-title">Add Category</span>
+        </a>
+      </li>
+      <li class="nav-item menu-items">
+        <a class="nav-link" href="{{route('allcategory')}}">
+          <span class="menu-icon">
+            <i class="mdi mdi-speedometer"></i>
+          </span>
+          <span class="menu-title">All Category</span>
+        </a>
+      </li>
+      <li class="nav-item menu-items">
         <a class="nav-link" href="{{route('all_Prouducts')}}">
           <span class="menu-icon">
             <i class="mdi mdi-speedometer"></i>
