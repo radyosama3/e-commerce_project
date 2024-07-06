@@ -25,9 +25,9 @@ This is a fully functional e-commerce application built with Laravel. It include
 
 ## Requirements
 
-- PHP >= 7.4
+- PHP >= 8.2
 - Composer
-- Laravel >= 8.x
+- Laravel >= 10.x
 - MySQL or any other SQL-based database
 
 ## Installation
