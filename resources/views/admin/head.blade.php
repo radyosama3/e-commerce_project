@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{trans('message.lang')}}" dir="{{trans('message.dir')}}">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">

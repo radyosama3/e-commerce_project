@@ -7,9 +7,9 @@
             <thead>
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">Name</th>
-                <th scope="col">description</th>
-                <th scope="col">Aciton</th>
+                <th scope="col">{{__('message.Name')}}</th>
+                <th scope="col">{{__('message.description')}}</th>
+                <th scope="col">{{__('message.Aciton')}}</th>
             </tr>
             </thead>
             <tbody>
@@ -22,7 +22,7 @@
                 <td>
 
                     <h1>
-                        <a class="btn btn-success" href="{{route('showcategory',$category->id)}}" >show</a>
+                        <a class="btn btn-success" href="{{route('showcategory',$category->id)}}" >{{__('message.show')}}</a>
                     </h1>
                 </td>
             </tr>

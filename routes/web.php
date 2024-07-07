@@ -27,37 +27,36 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+Route::controller(HomeController::class)->group(function(){
+    Route::get('change/{ar}','changelang')->name('changelang');
+    Route::get('redirectin','redirectin')->name('redirectin');
 
-Route::get('redirectin',[HomeController::class,'redirectin'])->name('redirectin');
-Route::controller(CategoryController::class)->group(function(){
-    Route::get('allcategory','allcategory')->name('allcategory');
-    Route::get('showcategory/{id}','showcategory')->name('showcategory');
-    Route::get('addcategory','addcategory')->name('addcategory');
-    Route::POST('storecategoty','storecategory')->name('storecategory');
-    Route::delete('deletecategory/{id}','deletecategory')->name('deletecategory');
 });
 
+
+Route::middleware(IsAdmin::class)->group(function(){
+    Route::controller(CategoryController::class)->group(function(){
+        Route::get('allcategory','allcategory')->name('allcategory');
+        Route::get('showcategory/{id}','showcategory')->name('showcategory');
+        Route::get('addcategory','addcategory')->name('addcategory');
+        Route::POST('storecategoty','storecategory')->name('storecategory');
+        Route::delete('deletecategory/{id}','deletecategory')->name('deletecategory');
+    });
     Route::controller(ProductController::class)->group(function(){
-        // Route::prefix('admin')->group(function(){
-
-            Route::middleware(IsAdmin::class)->group(function(){
                 Route::get('products/show/{id}','show')->name ('showProducts');
-
                 Route::get('products','allProducts')->name('all_Prouducts');
-
                 //create
                 Route::get('products/create','create')->name('create_Prodcts');
                 Route::post('products/','store')->name('store');
-
                 //edit
                 Route::get('products/edit/{id}','edit')->name('edit_product');
                 Route::put('products/{id}','update')->name('update');
-
                 //delete
                 Route::delete('products/{id}','delete')->name('delete_product ');
             });
         // });
     });
+
 
 //user route
 Route::controller(UserController::class)->group(function(){

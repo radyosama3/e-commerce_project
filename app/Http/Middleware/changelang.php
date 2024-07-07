@@ -4,10 +4,10 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\App;
 use Symfony\Component\HttpFoundation\Response;
 
-class IsAdmin
+class changelang
 {
     /**
      * Handle an incoming request.
@@ -16,12 +16,12 @@ class IsAdmin
      */
     public function handle(Request $request, Closure $next): Response
     {
-        $user = Auth::user();
+        if (session()->has('lang') && session()->get('lang') == 'ar') {
+            App::setLocale('ar');
+        } else {
+            App::setLocale('en');
+        }
 
-    if ($user && $user->role === 'admin') {
         return $next($request);
-    } else {
-        return to_route('allUser');
-    }
     }
 }

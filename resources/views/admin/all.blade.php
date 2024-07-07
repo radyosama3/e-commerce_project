@@ -9,12 +9,12 @@
     <thead>
       <tr>
         <th scope="col">#</th>
-        <th scope="col">Name</th>
+        <th scope="col">{{__('message.Name')}}</th>
         {{-- <th scope="col">desc</th> --}}
-        <th scope="col">price</th>
-        <th scope="col">Quantity</th>
-        <th scope="col">image</th>
-        <th scope="col">Aciton</th>
+        <th scope="col">{{__('message.price')}}</th>
+        <th scope="col">{{__('message.Quantity')}}</th>
+        <th scope="col">{{__('message.image')}}</th>
+        <th scope="col">{{__('message.Aciton')}}</th>
       </tr>
     </thead>
     <tbody>
@@ -29,7 +29,7 @@
         <td>
 
             <h1>
-                <a class="btn btn-success" href="{{url("products/show/$product->id")}}" >show</a>
+                <a class="btn btn-success" href="{{url("products/show/$product->id")}}" >{{__('message.show')}}</a>
             </h1>
         </td>
     </tr>
