@@ -18,6 +18,7 @@ return[
     "Submit"=>"Submit",
     "+ Create New Product"=>"+ Create New Product",
     "Logout"=>"Logout",
+    "Login"=>"Login",
     "Admin Profile"=>"Admin Profile",
     "Arabic"=>"AR",
     "English"=>"EN",
@@ -33,8 +34,13 @@ return[
     "Enter price"=>"Enter price",
     "Enter desc"=>"Enter desc",
     "Enter name"=>"Enter name",
-    // "show"=>"show",
-    // "show"=>"show",
+    "E_comm"=>"E_comm",
+    "erce"=>"erce",
+    "home"=>"home",
+    "Latest Products"=>"Latest Products",
+    "search"=>"search",
+    "my cart"=>"my cart",
+    "view all products"=>"view all products",
 
 
 ];

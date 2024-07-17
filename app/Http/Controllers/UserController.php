@@ -11,15 +11,19 @@ class UserController extends Controller
     public function all()
     {
        $products= Product::all();
-        // return response()->json($products);
        return view('user.home',compact('products'));
     }
 
     public function show($id){
-        $product= Product::findOrFail($id);
-        $categoryID= $product->category_id;
-        $category = Category::findOrFail($categoryID);
+        $product = Product::findOrFail($id);
+        $category = $product->category->name;
+
         return view ('user.show',compact('product','category'));
+    }
+    public function search (Request $request){
+        $key =$request->key;
+        Product::where('name','like','%key%')->get();
+        return to_route('allUser',compact('Product'));
     }
 }
 

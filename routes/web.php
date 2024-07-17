@@ -54,7 +54,6 @@ Route::middleware(IsAdmin::class)->group(function(){
                 //delete
                 Route::delete('products/{id}','delete')->name('delete_product ');
             });
-        // });
     });
 
 
@@ -62,4 +61,7 @@ Route::middleware(IsAdmin::class)->group(function(){
 Route::controller(UserController::class)->group(function(){
     Route::get('','all')->name('allUser');
     Route::get('products/{id}','show');
+    Route::get('search','search')->name('search');
+    
+
 });

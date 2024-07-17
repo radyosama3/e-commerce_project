@@ -1,4 +1,5 @@
 <div class="banner header-text">
+    @if (session()->has('lang')&& session()->get('lang')=="en")
     <div class="owl-banner owl-carousel">
       <div class="banner-item-01">
         <div class="text-content">
@@ -19,4 +20,5 @@
         </div>
       </div>
     </div>
+    @endif
   </div>

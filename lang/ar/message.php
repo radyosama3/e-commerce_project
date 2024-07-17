@@ -18,6 +18,7 @@ return[
     "Submit"=>"ادخل",
     "+ Create New Product"=>"+ اضف منتج جديد",
     "Logout"=>"تسجيل خروج ",
+    "Login"=>"تسجيل دخول",
     "Admin Profile"=>"صفحه الادمن",
     "Arabic"=>"عربي",
     "English"=>"انجليزي",
@@ -33,8 +34,14 @@ return[
     "Enter price"=>"ادخل السعر ",
     "Enter desc"=>"ادخل الوصف",
     "Enter name"=>"ادخل الاسم",
-    // "show"=>"show",
-    // "show"=>"show",
+    "E_comm"=>"متجر ",
+    "erce"=>"الكتروني",
+    "home"=>"الرئيسة",
+    "Latest Products"=>"اخر المنتجات",
+    "search"=>"بحث",
+    "view all products"=>"شاهد كل المنتجات",
+    "my cart"=>"سلة المشتريات",
+
 
 
 ];
