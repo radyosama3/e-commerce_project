@@ -25,5 +25,12 @@ class UserController extends Controller
         Product::where('name','like','%key%')->get();
         return to_route('allUser',compact('Product'));
     }
+    public function addtocart ($id ,Request $request){
+        
+        //qunt id (find or fail )
+        //session not have cart
+        //session have cart with id (store and add )
+
+    }
 }
 

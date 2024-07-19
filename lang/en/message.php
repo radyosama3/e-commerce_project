@@ -41,6 +41,7 @@ return[
     "search"=>"search",
     "my cart"=>"my cart",
     "view all products"=>"view all products",
+    "add to cart"=>"add to cart",
 
 
 ];

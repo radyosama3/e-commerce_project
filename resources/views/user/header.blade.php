@@ -9,24 +9,24 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="{{route('redirectin')}}">{{__('message.home')}}
+            <a class="nav-link" href="{{route('redirectin')}}">{{__('message.home')}}
                 <span class="sr-only">(current)</span>
-              </a>
+            </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="products.html">{{__('message.my cart')}}</a>
             </li>
-            @if (session()->has('lang')&& session()->get('lang')=="ar")
             <li class="nav-item">
-                <a class="nav-link" href="{{url('change/en')}}">الانجليزية</a>
+                @if (session()->get('lang') == 'ar')
+                    <a href="{{ url('change/en') }}" class="nav-link">
+                        {{ __('message.English') }}
+                    </a>
+                @else
+                    <a href="{{ url('change/ar') }}" class="nav-link">
+                        {{ __('message.Arabic') }}
+                    </a>
+                @endif
             </li>
-            @endif
-
-            @if (session()->has('lang')&& session()->get('lang')=="en")
-            <li class="nav-item">
-                <a class="nav-link" href="{{url('change/ar')}}">Arabic</a>
-            </li>
-            @endif
             @guest
             <li class="nav-item">
                 <a class="nav-link" href="{{ url('login') }}">{{__('message.Login')}}</a>

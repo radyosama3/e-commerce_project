@@ -41,6 +41,7 @@ return[
     "search"=>"بحث",
     "view all products"=>"شاهد كل المنتجات",
     "my cart"=>"سلة المشتريات",
+    "add to cart"=>"اضافة الي السلة",
 
 
 
