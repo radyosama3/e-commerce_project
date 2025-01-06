@@ -8,10 +8,12 @@
             <h2>{{__('message.Latest Products')}}</h2>
             <a href="products.html">{{__('message.view all products')}} <i class="fa fa-angle-right"></i></a>
             {{-- {{route('search')}} --}}
-            <form action="" method="get">
+            <form action="{{url('search')}}" method="get">
                 <input type="text" name="key" id="" value="{{old('key')}}" class="form-control mt-2">
                 <button type="submit" class="btn btn-info mt-2">{{__('message.search')}}</button>
             </form>
+            @include('success')
+            @include('errors')
           </div>
         </div>
         @foreach($products as $product)
@@ -29,18 +31,14 @@
                     </div>
                     <form action="{{ route('addtocart', $product->id) }}" method="post" class="d-flex align-items-center">
                         @csrf
-                        <input type="number" name="qunt" class="form-control me-3" placeholder="Quantity" min="1" value="{{ old('qunt', 1) }}">
-                        @if(old('qunt', 1)  >= 1)
+                        <input type="number" name="qty" min="1" value="1" class="form-control me-3" placeholder="Quantity" >
                             <button type="submit" class="btn btn-info">{{ __('message.add to cart') }}</button>
-                        @endif
                     </form>
                 </div>
 
             </div>
         </div>
     @endforeach
-
-
 
       </div>
     </div>

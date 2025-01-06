@@ -63,5 +63,4 @@ Route::controller(UserController::class)->group(function(){
     Route::get('products/{id}','show');
     Route::get('search','search')->name('search');
     Route::post('addtocart/{id}','addtocart')->name('addtocart');
-
 });
