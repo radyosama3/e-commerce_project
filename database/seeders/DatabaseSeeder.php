@@ -23,8 +23,8 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
         DB::table('users')->insert([
-            'name'=>'user',
-            'email'=>'user@gmail.com',
+            'name'=>'admin',
+            'email'=>'admin@gmail.com',
             'password'=>bcrypt(123456789)
         ]);
 
