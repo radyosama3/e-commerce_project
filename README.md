@@ -34,4 +34,4 @@ This is a fully functional e-commerce application built with Laravel. It include
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/your-repo.git
+   git clone https://github.com/your-username/e-commerce_project
