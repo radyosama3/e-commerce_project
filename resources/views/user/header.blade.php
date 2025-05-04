@@ -14,7 +14,7 @@
             </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="products.html">{{__('message.my cart')}}</a>
+              <a class="nav-link" href="{{route('allUser')}}">{{__('message.my cart')}}</a>
             </li>
             <li class="nav-item">
                 @if (session()->get('lang') == 'ar')

@@ -25,7 +25,13 @@
         {{-- <td>{{$product->desc}}</td> --}}
         <td>{{$product->price}}</td>
         <td>{{$product->quantity}}</td>
-        <td><img src="{{asset("storage/$product->image")}}" width="100px" alt="" srcset=""></td>
+        <td>
+            @if ($product->image == null)
+            <img src="{{ asset('/storage/images/default.png') }}" width="100px" alt="">
+            @else
+            <img src="{{ asset("storage/$product->image") }}" width="100px" alt="">
+            @endif
+        </td>
         <td>
 
             <h1>

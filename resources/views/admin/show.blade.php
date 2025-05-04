@@ -8,8 +8,13 @@ prouduct Name: {{$product->name}} <br> <hr>
 prouduct desc: {{$product->desc}} <br> <hr>
 prouduct price: {{$product->price}} <br> <hr>
 prouduct quantity: {{$product->quantity}} <br><hr>
-prouduct Image <br>
-</Image:br> <img src="{{asset("storage/$product->image")}}" alt="">
+prouduct Image
+<br>
+@if ($product->image == null)
+<img src="{{ asset('/storage/images/default.png') }}" width="250px" alt="">
+@else
+<img src="{{ asset("storage/$product->image") }}" width="250px" alt="">
+@endif
 <br>
 <hr>
 <form action="{{ route('delete_product ', $product->id) }}" method="POST" onsubmit="return confirmDelete()">
@@ -21,7 +26,7 @@ prouduct Image <br>
 <br>
 <hr>
 <h1>
-    
+
     <a  href="{{url("products/edit/$product->id")}}" class="btn btn-success">edit  </a>
 </h1>
     <script>

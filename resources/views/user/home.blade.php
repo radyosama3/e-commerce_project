@@ -6,7 +6,7 @@
         <div class="col-md-12">
           <div class="section-heading">
             <h2>{{__('message.Latest Products')}}</h2>
-            <a href="products.html">{{__('message.view all products')}} <i class="fa fa-angle-right"></i></a>
+            <a href="{{route("allUser")}}">{{__('message.view all products')}} <i class="fa fa-angle-right"></i></a>
             {{-- {{route('search')}} --}}
             <form action="{{url('search')}}" method="get">
                 <input type="text" name="key" id="" value="{{old('key')}}" class="form-control mt-2">
@@ -20,7 +20,11 @@
         <div class="col-md-4 mb-4">
             <div class="product-item" style="border: 1px solid #ddd; border-radius: 5px; overflow: hidden;">
                 <a href="{{ url('products/'.$product->id) }}">
-                    <img src="{{ asset('storage/'.$product->image) }}" alt="" style="width: 100%; height: 200px; object-fit: cover;">
+                    @if ($product->image == null)
+                    <img class="p-2" src="{{ asset('/storage/images/default.png') }}" style="width: 100%; height: 200px; object-fit: cover;" alt="">
+                    @else
+                    <img class="img-fluid" src="{{ asset("storage/$product->image") }}" style="width: 100%; height: 200px; object-fit: cover;"alt="">
+                    @endif
                 </a>
                 <div class="down-content p-3">
                     <div class="d-flex justify-content-between align-items-center mb-5">
