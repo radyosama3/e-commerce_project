@@ -4,9 +4,7 @@
       <div class="row">
         <div class="col-md-12">
           <div class="inner-content">
-            <p>Copyright &copy; 2020 Sixteen Clothing Co., Ltd.
-
-          - Design: <a rel="nofollow noopener" href="https://templatemo.com" target="_blank">TemplateMo</a></p>
+            <p>Copyright &copy;  <a rel="nofollow noopener" href="https://www.linkedin.com/in/rady-osama/" target="_blank">Rady Osama</a></p>
           </div>
         </div>
       </div>
